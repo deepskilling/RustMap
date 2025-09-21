@@ -1,0 +1,69 @@
+[package]
+name = "nmap_scanner"
+version = "0.1.0"
+edition = "2021"
+description = "High-performance network scanning tool implementing nmap features"
+authors = ["Your Name <your.email@domain.com>"]
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+# Async runtime and utilities
+tokio = { version = "1.0", features = ["full"] }
+futures = "0.3"
+async-trait = "0.1"
+
+# Configuration management
+config = "0.14"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_yaml = "0.9"
+toml = "0.8"
+
+# Networking
+socket2 = { version = "0.5", features = ["all"] }
+pnet = "0.34"
+dns-lookup = "2.0"
+trust-dns-resolver = "0.23"
+
+# Logging and monitoring
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+tracing-appender = "0.2"
+metrics = "0.21"
+metrics-exporter-prometheus = "0.12"
+
+# Error handling
+thiserror = "1.0"
+anyhow = "1.0"
+
+# CLI
+clap = { version = "4.0", features = ["derive", "env"] }
+indicatif = "0.17"
+
+# File I/O and persistence
+csv = "1.3"
+regex = "1.10"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.0", features = ["v4", "serde"] }
+
+# Security and crypto (for advanced features)
+rand = "0.8"
+sha2 = "0.10"
+
+# Raw socket and packet manipulation
+libc = "0.2"
+
+# System utilities
+sysinfo = "0.29"
+nix = { version = "0.27", features = ["user"] }
+num_cpus = "1.0"
+
+[dev-dependencies]
+tokio-test = "0.4"
+criterion = "0.5"
+mockall = "0.12"
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"

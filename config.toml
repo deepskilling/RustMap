@@ -1,0 +1,150 @@
+# Nmap Scanner Configuration File
+# This file contains all configuration settings for the nmap scanner application
+
+[scanning]
+# Default scan type (tcp_connect, syn, udp, etc.)
+default_scan_type = "tcp_connect"
+
+# Default port range to scan
+default_ports = "1-1000"
+
+# Enable service detection by default
+service_detection = true
+
+# Enable OS detection by default
+os_detection = true
+
+# Enable vulnerability scanning
+vuln_scanning = false
+
+# Default timing template (0-5: paranoid, sneaky, polite, normal, aggressive, insane)
+timing_template = 3
+
+[network]
+# Default network interface (leave empty for auto-select)
+default_interface = ""
+
+# DNS resolution timeout in seconds
+dns_timeout_secs = 10
+
+# Connection timeout for TCP scans in seconds
+connection_timeout_secs = 3
+
+# Enable IPv6 support
+ipv6_enabled = true
+
+# Source IP for spoofing (leave empty for default)
+source_ip = ""
+
+# Source port range for scanning (leave empty for random)
+source_port_range = ""
+
+[logging]
+# Logging level (trace, debug, info, warn, error)
+level = "info"
+
+# Output format (json, pretty, compact)
+format = "pretty"
+
+# Log file path (leave empty for stdout only)
+file_path = ""
+
+# Maximum log file size in MB
+max_file_size_mb = 100
+
+# Number of archived log files to keep
+max_archived_files = 5
+
+# Enable structured logging
+structured = false
+
+[output]
+# Default output format (human, json, xml, csv)
+default_format = "human"
+
+# Output directory for scan results
+output_dir = "./scan_results"
+
+# Enable real-time progress display
+show_progress = true
+
+# Include timestamps in output
+include_timestamps = true
+
+# Maximum lines to display in console output
+max_console_lines = 1000
+
+[performance]
+# Maximum concurrent scans
+max_concurrent_scans = 1000
+
+# Maximum concurrent host discoveries
+max_concurrent_hosts = 100
+
+# Scan batch size for large networks
+scan_batch_size = 1000
+
+# Worker thread pool size (0 = auto-detect)
+worker_threads = 0
+
+# Memory limit for scan results (MB)
+memory_limit_mb = 512
+
+# Enable adaptive scanning speed
+adaptive_timing = true
+
+[security]
+# Enable packet fragmentation
+packet_fragmentation = false
+
+# Use decoy scanning
+use_decoys = false
+
+# Number of decoy IPs to use
+decoy_count = 3
+
+# Enable source IP spoofing
+ip_spoofing = false
+
+# Randomize scan order
+randomize_order = true
+
+# Maximum scan rate (packets per second, 0 = unlimited)
+max_scan_rate = 0
+
+[persistence]
+# Base directory for data storage
+data_dir = "./data"
+
+# Enable automatic result saving
+auto_save = true
+
+# Scan history retention in days
+history_retention_days = 30
+
+# Maximum storage size (MB)
+max_storage_mb = 1024
+
+# Compression level for stored data (0-9)
+compression_level = 6
+
+# Example target configurations
+[targets]
+# Common target examples (these are not used automatically)
+examples = [
+    "192.168.1.1",
+    "192.168.1.0/24", 
+    "scanme.nmap.org",
+    "example.com"
+]
+
+# Common port configurations
+[ports]
+# Top 100 most common ports
+top_100 = "7,9,13,21-23,25-26,37,53,79-81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2000-2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5060,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"
+
+# All TCP ports (use with caution - very slow!)
+all_tcp = "1-65535"
+
+# Common UDP ports
+common_udp = "53,67-68,69,123,135,137-139,161-162,445,631,1434,1900,4500,5353"
