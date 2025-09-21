@@ -1,3 +1,11 @@
+//! RustMap - Professional Network Scanner
+//!
+//! Main entry point for the nmap scanner application.
+//! Initializes logging, configuration, and runs the CLI interface.
+//!
+//! Copyright (c) 2025 Deepskilling Inc
+//! Licensed under the MIT License (https://opensource.org/licenses/MIT)
+
 use anyhow::Result;
 use clap::Parser;
 use nmap_scanner::{

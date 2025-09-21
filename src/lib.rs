@@ -1,6 +1,9 @@
-//! # Nmap Scanner - Professional Network Scanning Tool
+//! # RustMap - Professional Network Scanning Tool
 //! 
 //! A high-performance network scanning tool implemented in Rust following SOLID principles.
+//! 
+//! Copyright (c) 2025 Deepskilling Inc
+//! Licensed under the MIT License (https://opensource.org/licenses/MIT)
 //! 
 //! ## Features
 //! 

@@ -2,9 +2,15 @@
 name = "nmap_scanner"
 version = "0.1.0"
 edition = "2021"
-description = "High-performance network scanning tool implementing nmap features"
-authors = ["Your Name <your.email@domain.com>"]
-license = "MIT OR Apache-2.0"
+description = "RustMap - Professional network scanning tool implementing nmap features in Rust"
+authors = ["Deepskilling Inc <contact@deepskilling.com>"]
+license = "MIT"
+repository = "https://github.com/deepskilling/RustMap"
+homepage = "https://github.com/deepskilling/RustMap"
+documentation = "https://github.com/deepskilling/RustMap"
+readme = "README.md"
+keywords = ["nmap", "network-scanner", "port-scanner", "security", "network-discovery"]
+categories = ["network-programming", "command-line-utilities", "development-tools"]
 
 [dependencies]
 # Async runtime and utilities

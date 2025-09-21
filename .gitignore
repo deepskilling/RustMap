@@ -31,7 +31,8 @@ Thumbs.db
 *.json
 *.xml
 *.csv
-*.md
+test_*.md
+*_test.md
 test_*
 *_test.*
 
